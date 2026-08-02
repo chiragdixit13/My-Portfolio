@@ -71,7 +71,7 @@ export function Hero({
     return () => window.removeEventListener("pointermove", onMove);
   }, [mx, my]);
 
-  const name = profile.name.split("");
+  const name = profile.name.split(" ");
 
   return (
     <section
@@ -94,22 +94,26 @@ export function Hero({
             Open to AI / ML & Software Engineering roles
           </motion.div>
 
-          <div className="group relative mb-3 flex items-start justify-between gap-5 sm:gap-6">
-            <div className="min-w-0 flex-1">
-              <h1 className="mt-4 font-display text-[clamp(2.75rem,8vw,5.5rem)] leading-[0.9] font-semibold sm:mt-2">
+          <div className="group relative mb-6 flex flex-col-reverse items-center gap-8 md:mb-3 md:flex-row md:items-start md:justify-between md:gap-6">
+            <div className="min-w-0 flex-1 w-full text-center md:text-left">
+              <h1 className="mt-4 font-display text-[clamp(2.3rem,7vw,5.8rem)] leading-none font-semibold tracking-tight sm:mt-2">
                 <span className="sr-only">{profile.name}</span>
-                <span aria-hidden className="flex flex-wrap">
-                  {name.map((ch, i) => (
-                    <motion.span
-                      key={i}
-                      initial={{ opacity: 0, y: 40, rotateX: -60 }}
-                      animate={{ opacity: 1, y: 0, rotateX: 0 }}
-                      transition={{ delay: 0.25 + i * 0.035, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-                      className="inline-block"
-                    >
-                      {ch === " " ? "\u00A0" : ch}
-                    </motion.span>
-                  ))}
+                <span aria-hidden className="flex flex-wrap justify-center md:justify-start">
+                  {name.map((word, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                    delay: 0.25 + i * 0.18,
+                    duration: 0.8,
+                    ease: [0.22, 1, 0.36, 1],
+                   }}
+                   className="inline-block mr-3"
+  >
+                   {word}
+                   </motion.span>
+                   ))}
                 </span>
               </h1>
 
@@ -137,7 +141,7 @@ export function Hero({
               initial={{ opacity: 0, scale: 0.85 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4, duration: 0.7 }}
-              className="relative ml-auto shrink-0 -translate-y-7 sm:mt-0 sm:translate-x-2"
+              className="relative shrink-0 md:ml-auto md:-translate-y-7 md:translate-x-2"
               whileHover={{ y: -6, rotate: -1.5, scale: 1.06 }}
               onHoverStart={() => setIsPortraitHovered(true)}
               onHoverEnd={() => setIsPortraitHovered(false)}
@@ -155,7 +159,7 @@ export function Hero({
                     alt={`${profile.name} portrait`}
                     width={360}
                     height={450}
-                    className="aspect-[4/5] w-[10rem] rounded-[1.35rem] object-cover object-center transition-transform duration-500 ease-out sm:w-[12rem] md:w-[13.5rem] lg:w-[15rem] xl:w-[16.5rem] group-hover:scale-[1.05]"
+                    className="aspect-[4/5] w-[13rem] rounded-[1.35rem] object-cover object-center transition-transform duration-500 ease-out sm:w-[15rem] md:w-[16rem] lg:w-[18rem] xl:w-[20rem] group-hover:scale-105"
                   />
                 </div>
               </button>
