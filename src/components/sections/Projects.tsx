@@ -152,9 +152,11 @@ export function Projects() {
                       <h3 className="text-xl font-semibold text-balance">{p.title}</h3>
                       <p className="mt-1 text-sm text-muted-foreground">{p.subtitle}</p>
                     </div>
-                    <span className="glass grid h-9 w-9 shrink-0 place-items-center rounded-full transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
-                      <ArrowUpRight className="h-4 w-4 text-cyan" />
-                    </span>
+                    {p.slug !== "student-performance" && p.slug !== "house-price" && (
+                      <span className="glass grid h-9 w-9 shrink-0 place-items-center rounded-full transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">
+                        <ArrowUpRight className="h-4 w-4 text-cyan" />
+                      </span>
+                    )}
                   </div>
 
                   <div className="mt-5 flex flex-wrap gap-2">
@@ -185,14 +187,16 @@ export function Projects() {
                         <Github className="h-3.5 w-3.5" /> GitHub
                       </a>
                     )}
-                    <a
-                      href={p.links.demo || p.links.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="glass inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs hover:border-cyan/50"
-                    >
-                      <ExternalLink className="h-3.5 w-3.5" /> Live demo
-                    </a>
+                    {p.slug !== "student-performance" && p.links.demo && (
+                      <a
+                        href={p.links.demo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="glass inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs hover:border-cyan/50"
+                      >
+                        <ExternalLink className="h-3.5 w-3.5" /> Live demo
+                      </a>
+                    )}
                   </div>
                 </div>
               </GlassCard>

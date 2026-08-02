@@ -12,7 +12,7 @@ export function Experience() {
           Internships that <span className="text-gradient">shipped something</span>
         </>
       }
-      description="Hands-on programmes across generative AI analytics, full stack engineering and core Java."
+      description="Hands-on programmes across full stack engineering and core Java."
     >
       <div className="relative">
         <div className="absolute top-0 bottom-0 left-4 hidden w-px bg-gradient-to-b from-violet/60 via-primary/30 to-transparent md:block" />

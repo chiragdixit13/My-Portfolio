@@ -182,7 +182,11 @@ export const projects = [
       { label: "Uptime", value: "99.5%" },
       { label: "Lighthouse", value: "94" },
     ],
-    links: { github: "https://github.com/chiragdixit", demo: "", caseStudy: "" },
+    links: {
+      github: "https://github.com/chiragdixit13/Emergency-SOS",
+      demo: "https://emergency-sos-oltf.vercel.app",
+      caseStudy: "",
+    },
   },
   {
     slug: "student-performance",
@@ -215,7 +219,11 @@ export const projects = [
       { label: "Recall", value: "0.91" },
       { label: "Features", value: "18" },
     ],
-    links: { github: "https://github.com/chiragdixit", demo: "", caseStudy: "" },
+    links: {
+      github: "https://github.com/chiragdixit13/Student-Performance-Prediction-ML",
+      demo: "",
+      caseStudy: "",
+    },
   },
   {
     slug: "house-price",
@@ -245,7 +253,11 @@ export const projects = [
       { label: "R² score", value: "0.89" },
       { label: "Models", value: "5" },
     ],
-    links: { github: "https://github.com/chiragdixit", demo: "", caseStudy: "" },
+    links: {
+      github: "https://github.com/chiragdixit13/House-Price-Prediction",
+      demo: "",
+      caseStudy: "",
+    },
   },
   {
     slug: "ai-next",
@@ -276,19 +288,6 @@ export const projects = [
 ];
 
 export const experience = [
-  {
-    role: "GenAI Data Analytics Intern (Job Simulation)",
-    company: "Tata via Forage",
-    duration: "June 2026",
-    logo: certTata,
-    responsibilities: [
-      "Ran exploratory data analysis and risk profiling on customer datasets",
-      "Predicted delinquency using AI-assisted modelling",
-      "Built a business report with data storytelling for collections strategy",
-      "Designed an AI-driven collections workflow",
-    ],
-    achievements: ["Completed all four practical tasks with verified certification"],
-  },
   {
     role: "MERN Full Stack Developer Intern",
     company: "Vital Skills × Techkriti, IIT Kanpur",
